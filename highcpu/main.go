@@ -2,6 +2,7 @@ package main
 
 import (
 	"flag"
+	"log"
 	"runtime"
 	"time"
 )
@@ -30,6 +31,15 @@ func main() {
 		}()
 	}
 
-	time.Sleep(time.Second * 10)
+	for i := 0; i < 10; i++ {
+		if !*multi {
+			log.Println("loading a single CPU...")
+		} else {
+			log.Println("loading all CPUs...")
+		}
+
+		time.Sleep(time.Second * 1)
+	}
+
 	close(done)
 }
