@@ -7,6 +7,7 @@
 *.dll
 *.so
 *.dylib
+hellok8s/hellok8s
 highcpu/highcpu
 racecondition/racecondition
 concurrent/concurrent

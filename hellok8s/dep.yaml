@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hellok8s
+spec:
+  selector:
+    matchLabels:
+      app: hellok8s
+  replicas: 1
+  revisionHistoryLimit: 5
+  template:
+    metadata:
+      labels:
+        app: hellok8s
+    spec:
+      containers:
+      - name: hellok8s
+        image: asia.gcr.io/mobingi-main/hellok8s:v1
+        imagePullPolicy: Always
+        env:
+        - name: GET_HOSTS_FROM
+          value: dns
+        ports:
+        - containerPort: 8080
