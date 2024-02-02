@@ -8,5 +8,5 @@ spec:
     kind: Deployment
     name: hellok8s
   minReplicas: 1
-  maxReplicas: 3
+  maxReplicas: 1
   targetCPUUtilizationPercentage: 70
