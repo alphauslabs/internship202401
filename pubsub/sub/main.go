@@ -35,7 +35,7 @@ func main() {
 
 	// Receive blocks until the context is cancelled or an error occurs.
 	err = sub.Receive(ctx, func(_ context.Context, msg *pubsub.Message) {
-		log.Printf("Received: %q", msg)
+		log.Printf("Received: %v", msg)
 		msg.Ack()
 	})
 
