@@ -14,6 +14,7 @@ var (
 )
 
 func main() {
+	flag.Parse()
 	projectId := "mobingi-main"
 	ctx := context.Background()
 
