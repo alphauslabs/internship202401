@@ -1,4 +1,4 @@
-module alphaus.cloud/pubsubpub
+module alphaus.cloud/pubsub
 
 go 1.22.0
 
