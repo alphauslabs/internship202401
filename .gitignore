@@ -15,8 +15,8 @@ concurrent/concurrent
 # tcpclient/tcpclient
 httpserver
 httpclient
-pubsub/pub/pubsubpub
-pubsub/sub/pubsubsub
+pubsub/pub/pub
+pubsub/sub/sub
 
 # Test binary, built with `go test -c`
 *.test
