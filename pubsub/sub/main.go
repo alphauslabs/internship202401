@@ -9,12 +9,13 @@ import (
 )
 
 var (
+	prjId = flag.String("project", "alphaus-live", "Project id")
 	subId = flag.String("subscription", "", "Subscription name")
 )
 
 func main() {
 	flag.Parse()
-	projectId := "mobingi-main"
+	projectId := *prjId
 	ctx := context.Background()
 
 	if *subId == "" {
