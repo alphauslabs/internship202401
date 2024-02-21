@@ -34,9 +34,11 @@ func main() {
 	sub := client.Subscription(*subId)
 	sub.ReceiveSettings.Synchronous = true
 
+	log.Printf("subscribing to %v...\n", *subId)
+
 	// Receive blocks until the context is cancelled or an error occurs.
 	err = sub.Receive(ctx, func(_ context.Context, msg *pubsub.Message) {
-		log.Printf("Received: %q", msg)
+		log.Printf("received: %q", msg)
 		msg.Ack()
 	})
 
