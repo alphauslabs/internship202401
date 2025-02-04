@@ -17,6 +17,7 @@ httpserver
 httpclient
 pubsub/pub/pub
 pubsub/sub/sub
+cppthreads/a.out
 
 # Test binary, built with `go test -c`
 *.test
